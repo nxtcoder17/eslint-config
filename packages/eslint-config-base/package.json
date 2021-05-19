@@ -1,12 +1,18 @@
 {
-  "name": "eslint-config-base",
+  "name": "@madhouselabs/eslint-config-base",
   "version": "1.0.0",
   "description": "",
   "main": "eslintrc.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "keywords": ["madhouselabs", "eslint"],
+  "author": "nxtcoder17",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public",
+    "@madhouselabs:registry": "https://registry.npmjs.org"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "peerDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
 }
