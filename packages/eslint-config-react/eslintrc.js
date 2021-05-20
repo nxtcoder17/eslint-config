@@ -5,10 +5,10 @@ module.exports = {
   parser: '@babel/eslint-parser',
   parserOptions: {
     babelOptions: {
-      configFile: './babel.config.js',
+      configFile: './babel.config.json',
     },
   },
-  
+
   env: {
     node: true,
     es6: true,
@@ -16,37 +16,39 @@ module.exports = {
     browser: true,
   },
 
-
-   settings: {
+  settings: {
     'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+        moduleDirectory: ['node_modules', './src']
+      },
       webpack: {
-        config: 'webpack.config.js',
+        config: './webpack.config.js',
       },
     },
-   },
+  },
 
   globals: {
     Logger: false,
   },
 
   rules: {
-      'import/extensions': 0,
-      'import/prefer-default-export': 'off',
+    'import/extensions': 0,
+    'import/prefer-default-export': 'off',
 
-      // React JSX
-      'react/jsx-uses-react': 0,
-      'react/jsx-uses-vars': 0,
-      'react/jsx-props-no-spreading': 0,
+    'react/jsx-uses-react': 0,
+    'react/jsx-uses-vars': 0,
+    'react/jsx-props-no-spreading': 0,
 
-      camelcase: ['error', { ignoreDestructuring: true, properties: 'never' }],
-     'no-underscore-dangle': 0,
-     'no-unused-vars': [
+    camelcase: ['error', { ignoreDestructuring: true, properties: 'never' }],
+    'no-underscore-dangle': 0,
+    'no-unused-vars': [
       'error',
       {
         ignoreRestSiblings: true,
         varsIgnorePattern: '^_',
         argsIgnorePattern: '^_',
       },
-     ],
+    ],
   },
 };
