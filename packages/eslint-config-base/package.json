@@ -1,9 +1,12 @@
 {
   "name": "@madhouselabs/eslint-config-base",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "eslintrc.js",
-  "keywords": ["madhouselabs", "eslint"],
+  "keywords": [
+    "madhouselabs",
+    "eslint"
+  ],
   "author": "nxtcoder17",
   "license": "ISC",
   "publishConfig": {
@@ -12,7 +15,11 @@
   },
   "peerDependencies": {
     "eslint": "^7.2.0",
+    "prettier": "^2.3.0",
     "eslint-config-airbnb-base": "14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-node": "^0.3.4",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0"
   }
 }
